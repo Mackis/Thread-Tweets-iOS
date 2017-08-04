@@ -48,9 +48,13 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupView()
+    }
     func setupView(){
         view.backgroundColor = UIColor.white
         
@@ -68,7 +72,6 @@ class HomeVC: UIViewController {
             make.height.equalTo(60)
             make.width.equalToSuperview().multipliedBy(0.6)
             make.left.equalToSuperview().inset(8)
-            
         }
         
         // Add table

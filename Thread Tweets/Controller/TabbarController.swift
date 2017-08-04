@@ -15,7 +15,6 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        splashScreen()
         self.delegate = self
     }
     
@@ -23,16 +22,15 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
         let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor.white)
 
         self.view.addSubview(revealingSplashView)
-        
+        self.setupTabs()
         revealingSplashView.duration = 0.9
         revealingSplashView.animationType = .squeezeAndZoomOut
-        revealingSplashView.startAnimation {
-            self.setupTabs()
-        }
+        revealingSplashView.startAnimation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        splashScreen()
     }
     
     func setupTabs(){
@@ -52,7 +50,7 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
         tabThree.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 16, bottom: -6, right: -16)
         
         tabBar.tintColor = UIColor(hexString: "#3498db")
-        tabBar.barTintColor = .clear
+        tabBar.barTintColor = .white
         tabBar.unselectedItemTintColor = UIColor.lightGray
         viewControllers = [tabOne, tabTwo, tabThree]
     }
