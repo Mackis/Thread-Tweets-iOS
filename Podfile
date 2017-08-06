@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'Thread Tweets' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,5 +9,6 @@ target 'Thread Tweets' do
   pod 'RevealingSplashView'
   pod 'SwiftIcons', :git => 'https://github.com/ranesr/SwiftIcons'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'TBEmptyDataSet'
   pod 'SnapKit'
 end

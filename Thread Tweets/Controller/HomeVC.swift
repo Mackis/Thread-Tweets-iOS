@@ -8,9 +8,11 @@
 
 import UIKit
 import SnapKit
+import TBEmptyDataSet
 
 class HomeVC: UIViewController {
     
+    // MARK: - UI Properties
     lazy var headerView: UIView = {
         let v = UIView()
         v.backgroundColor = .white
@@ -42,15 +44,24 @@ class HomeVC: UIViewController {
         sc.selectedSegmentIndex = 0
         return sc
     }()
-
     
+    
+    // MARK: - Properties
     var tableView: UITableView!
-
+    var titles = [NSAttributedString(string: ""),  NSAttributedString(string: "")]
+    var messages = [NSAttributedString(string: ""),  NSAttributedString(string: "")]
+    
+    var threads: [[ModelTweet]]? = {
+        let fresh = [ModelTweet()]
+        let featured = [ModelTweet()]
+        return [fresh, featured]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView()
@@ -65,6 +76,7 @@ class HomeVC: UIViewController {
             make.height.equalTo(80)
             make.top.equalToSuperview()
         }
+        
         // Add Sections
         headerView.addSubview(sectionControl)
         sectionControl.snp.makeConstraints{ make in
@@ -75,10 +87,13 @@ class HomeVC: UIViewController {
         }
         
         // Add table
-        let table: UITableViewController = ThreadsTVC()
-        let tableView: UITableView = UITableView()
-        tableView.dataSource = table
-        tableView.delegate = table
+        tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.emptyDataSetDelegate = self
+        tableView.emptyDataSetDataSource = self
+        
+        tableView.separatorStyle = .none
         self.view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
@@ -107,3 +122,50 @@ extension UISegmentedControl {
         return image!
     }
 }
+
+extension HomeVC: UITableViewDataSource, UITableViewDelegate {
+     func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        cell.textLabel!.text = "foo"
+        return cell
+    }
+}
+
+extension HomeVC: TBEmptyDataSetDelegate, TBEmptyDataSetDataSource {
+    
+    func imageForEmptyDataSet(in scrollView: UIScrollView) -> UIImage? {
+        return UIImage.init(icon: .ionicons(.iosBoltOutline), size: CGSize(width: 120, height: 120), textColor: UIColor.flatYellow)
+    }
+    
+    func titleForEmptyDataSet(in scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString(string: "Sorry...")
+    }
+    
+    func descriptionForEmptyDataSet(in scrollView: UIScrollView) -> NSAttributedString? {
+        return NSAttributedString(string: "We seem to be experiencing some problems.")
+    }
+    
+    func backgroundColorForEmptyDataSet(in scrollView: UIScrollView) -> UIColor? {
+        return .white
+    }
+    
+    func emptyDataSetShouldDisplay(in scrollView: UIScrollView) -> Bool {
+        return 0 == 0
+    }
+    
+    func verticalOffsetForEmptyDataSet(in scrollView: UIScrollView) -> CGFloat {
+        return CGFloat(-60)
+    }
+    
+}
+
+
+

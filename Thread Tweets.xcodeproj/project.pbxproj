@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01518B041F36E7B100DAEA77 /* ModelTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B031F36E7B100DAEA77 /* ModelTweet.swift */; };
 		018A054C1F34F6F2009E3F70 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054B1F34F6F2009E3F70 /* TabbarController.swift */; };
 		018A054E1F34F83A009E3F70 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054D1F34F83A009E3F70 /* HomeVC.swift */; };
 		018A05501F34FA30009E3F70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054F1F34FA30009E3F70 /* ProfileVC.swift */; };
 		018A05521F34FA3D009E3F70 /* FavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A05511F34FA3D009E3F70 /* FavVC.swift */; };
-		018A05541F350416009E3F70 /* ThreadsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A05531F350416009E3F70 /* ThreadsTVC.swift */; };
 		01A878C91F345EEC00524F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A878C81F345EEC00524F34 /* AppDelegate.swift */; };
 		01A878D01F345EEC00524F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A878CF1F345EEC00524F34 /* Assets.xcassets */; };
 		01A878D31F345EEC00524F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A878D11F345EEC00524F34 /* LaunchScreen.storyboard */; };
@@ -19,11 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01518B031F36E7B100DAEA77 /* ModelTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTweet.swift; sourceTree = "<group>"; };
 		018A054B1F34F6F2009E3F70 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		018A054D1F34F83A009E3F70 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		018A054F1F34FA30009E3F70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		018A05511F34FA3D009E3F70 /* FavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavVC.swift; sourceTree = "<group>"; };
-		018A05531F350416009E3F70 /* ThreadsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsTVC.swift; sourceTree = "<group>"; };
 		01A878C51F345EEC00524F34 /* Thread Tweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thread Tweets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A878C81F345EEC00524F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A878CF1F345EEC00524F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,14 +47,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01518B021F36E79E00DAEA77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01518B031F36E7B100DAEA77 /* ModelTweet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01518B051F36EB2500DAEA77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		018A054A1F34F6CF009E3F70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				018A054B1F34F6F2009E3F70 /* TabbarController.swift */,
 				018A054D1F34F83A009E3F70 /* HomeVC.swift */,
-				018A05531F350416009E3F70 /* ThreadsTVC.swift */,
-				018A054F1F34FA30009E3F70 /* ProfileVC.swift */,
 				018A05511F34FA3D009E3F70 /* FavVC.swift */,
+				018A054F1F34FA30009E3F70 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -82,6 +96,8 @@
 			children = (
 				01A878DD1F345F8700524F34 /* Application */,
 				01A878DE1F345F9800524F34 /* Storyboard */,
+				01518B021F36E79E00DAEA77 /* Model */,
+				01518B051F36EB2500DAEA77 /* View */,
 				018A054A1F34F6CF009E3F70 /* Controller */,
 				01A878DA1F345EF300524F34 /* Images */,
 				01A878CF1F345EEC00524F34 /* Assets.xcassets */,
@@ -253,11 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				018A05501F34FA30009E3F70 /* ProfileVC.swift in Sources */,
-				018A05541F350416009E3F70 /* ThreadsTVC.swift in Sources */,
 				018A05521F34FA3D009E3F70 /* FavVC.swift in Sources */,
 				018A054E1F34F83A009E3F70 /* HomeVC.swift in Sources */,
 				01A878C91F345EEC00524F34 /* AppDelegate.swift in Sources */,
 				018A054C1F34F6F2009E3F70 /* TabbarController.swift in Sources */,
+				01518B041F36E7B100DAEA77 /* ModelTweet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mDevSA.Thread-Tweets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -410,7 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mDevSA.Thread-Tweets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

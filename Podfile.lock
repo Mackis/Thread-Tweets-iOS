@@ -5,12 +5,14 @@ PODS:
   - RevealingSplashView (0.1.0)
   - SnapKit (3.0.2)
   - SwiftIcons (1.5.1)
+  - TBEmptyDataSet (2.4)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - RevealingSplashView
   - SnapKit
   - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
+  - TBEmptyDataSet
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -31,7 +33,8 @@ SPEC CHECKSUMS:
   RevealingSplashView: 501dd03d975ba2c4165dd463ea1c7c407fb9d13e
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftIcons: b20641adce6b71fcb2e72389b4b5f2e87252df99
+  TBEmptyDataSet: 3ab5f29f071792350ac57060755d43ea32fddce9
 
-PODFILE CHECKSUM: fe12064e8cf0f4b3f571b02863d8eb73061b5131
+PODFILE CHECKSUM: 3614090ab707b0ebc3ccff4713291cee71136825
 
 COCOAPODS: 1.2.1
