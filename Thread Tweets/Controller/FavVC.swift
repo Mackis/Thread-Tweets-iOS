@@ -34,7 +34,6 @@ class FavVC: UIViewController {
             make.top.left.right.bottom.equalToSuperview()
         }
     }
-
 }
 
 extension FavVC: UITableViewDataSource, UITableViewDelegate {

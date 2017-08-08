@@ -29,7 +29,7 @@ class HomeVC: UIViewController {
         return v
     }()
     
-    lazy var sectionControl: UISegmentedControl = {
+    lazy var segCtrl: UISegmentedControl = {
         let sc = UISegmentedControl()
         sc.insertSegment(withTitle: "Featured", at: 0, animated: true)
         sc.setTitle("Featured", forSegmentAt: 0)
@@ -42,7 +42,16 @@ class HomeVC: UIViewController {
         sc.tintColor = UIColor.white
         sc.removeBorders()
         sc.selectedSegmentIndex = 0
+        sc.addTarget(self, action: #selector(segmentChange), for: .valueChanged)
         return sc
+    }()
+    
+    lazy var composeBtn: UIButton = {
+        let btn = UIButton()
+        btn.setIcon(icon: .ionicons(.compose), iconSize: 30, color: UIColor.flatMint, backgroundColor: .clear, forState: .normal)
+        btn.addTarget(self, action: #selector(self.gotoCompose), for: .touchUpInside)
+        btn.showsTouchWhenHighlighted = true 
+        return btn
     }()
     
     
@@ -52,7 +61,7 @@ class HomeVC: UIViewController {
     var messages = [NSAttributedString(string: ""),  NSAttributedString(string: "")]
     
     var threads: [[ModelTweet]]? = {
-        let fresh = [ModelTweet()]
+        let fresh = [ModelTweet(), ModelTweet()]
         let featured = [ModelTweet()]
         return [fresh, featured]
     }()
@@ -78,23 +87,40 @@ class HomeVC: UIViewController {
         }
         
         // Add Sections
-        headerView.addSubview(sectionControl)
-        sectionControl.snp.makeConstraints{ make in
-            make.bottom.equalToSuperview().inset(8)
+        headerView.addSubview(segCtrl)
+        segCtrl.snp.makeConstraints{ make in
+            make.bottom.equalToSuperview().inset(4)
             make.height.equalTo(60)
-            make.width.equalToSuperview().multipliedBy(0.6)
+            make.width.greaterThanOrEqualTo(headerView.snp.width).multipliedBy(0.6)
             make.left.equalToSuperview().inset(8)
         }
         
+        // Add Compose btn
+        headerView.addSubview(composeBtn)
+        composeBtn.snp.makeConstraints{ make in
+            make.bottom.equalTo(segCtrl)
+            make.height.equalTo(60)
+            make.width.equalTo(40)
+            make.right.equalToSuperview().inset(1)
+        }
+        
+        // Add Footer
+        setupTableView()
+    }
+    
+    func setupTableView(){
         // Add table
         tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.allowsSelection = true
         tableView.emptyDataSetDelegate = self
         tableView.emptyDataSetDataSource = self
+        tableView.register(TweetCell.self)
+        tableView.delaysContentTouches = false 
         
         tableView.separatorStyle = .none
-        self.view.addSubview(tableView)
+        view.addSubview(tableView)
         
         tableView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
@@ -102,6 +128,13 @@ class HomeVC: UIViewController {
         }
     }
     
+    @objc func gotoCompose(){
+        print("goto")
+    }
+    
+    @objc func segmentChange(){
+        tableView.reloadData()
+    }
 }
 
 extension UISegmentedControl {
@@ -129,13 +162,22 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return (threads?[segCtrl.selectedSegmentIndex].count)!
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel!.text = "foo"
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TweetCell
+        cell.tweet = ModelTweet()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let threadVC = ThreadVC()
+        threadVC.providesPresentationContextTransitionStyle = true
+        threadVC.definesPresentationContext = true
+        threadVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        threadVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        present(threadVC, animated: true)
     }
 }
 
