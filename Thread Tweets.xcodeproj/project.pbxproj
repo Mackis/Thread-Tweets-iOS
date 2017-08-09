@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0140AF3A1F3B92F900920F40 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140AF391F3B92F900920F40 /* Strings.swift */; };
 		01518B041F36E7B100DAEA77 /* ModelTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B031F36E7B100DAEA77 /* ModelTweet.swift */; };
 		01518B0B1F36F43400DAEA77 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B091F36F43400DAEA77 /* TweetCell.swift */; };
 		01518B0C1F36F43400DAEA77 /* TweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01518B0A1F36F43400DAEA77 /* TweetCell.xib */; };
 		01518B0F1F36FB8200DAEA77 /* Ext+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B0E1F36FB8200DAEA77 /* Ext+UITableView.swift */; };
 		01518B121F36FCAC00DAEA77 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B111F36FCAC00DAEA77 /* NibLoadable.swift */; };
 		01518B141F36FD0E00DAEA77 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01518B131F36FD0E00DAEA77 /* Reusable.swift */; };
+		0159E0451F3B1755005858B1 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0159E0441F3B1755005858B1 /* SafariServices.framework */; };
 		018A054C1F34F6F2009E3F70 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054B1F34F6F2009E3F70 /* TabbarController.swift */; };
 		018A054E1F34F83A009E3F70 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054D1F34F83A009E3F70 /* HomeVC.swift */; };
 		018A05501F34FA30009E3F70 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018A054F1F34FA30009E3F70 /* ProfileVC.swift */; };
@@ -22,16 +24,21 @@
 		01A878C91F345EEC00524F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A878C81F345EEC00524F34 /* AppDelegate.swift */; };
 		01A878D01F345EEC00524F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A878CF1F345EEC00524F34 /* Assets.xcassets */; };
 		01A878D31F345EEC00524F34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A878D11F345EEC00524F34 /* LaunchScreen.storyboard */; };
+		01D916C71F3BA49F009422B5 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D916C51F3BA49F009422B5 /* ProfileCell.swift */; };
+		01D916C81F3BA49F009422B5 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D916C61F3BA49F009422B5 /* ProfileCell.xib */; };
 		E21EC94EC7AD805A972CD3D5 /* Pods_Thread_Tweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379A492F9915C9F1733BF988 /* Pods_Thread_Tweets.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0140AF391F3B92F900920F40 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		01518B031F36E7B100DAEA77 /* ModelTweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTweet.swift; sourceTree = "<group>"; };
 		01518B091F36F43400DAEA77 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		01518B0A1F36F43400DAEA77 /* TweetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCell.xib; sourceTree = "<group>"; };
 		01518B0E1F36FB8200DAEA77 /* Ext+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITableView.swift"; sourceTree = "<group>"; };
 		01518B111F36FCAC00DAEA77 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		01518B131F36FD0E00DAEA77 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		0159E0411F3B1390005858B1 /* Thread Tweets-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thread Tweets-Bridging-Header.h"; sourceTree = "<group>"; };
+		0159E0441F3B1755005858B1 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		018A054B1F34F6F2009E3F70 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		018A054D1F34F83A009E3F70 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		018A054F1F34FA30009E3F70 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -43,6 +50,8 @@
 		01A878CF1F345EEC00524F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A878D21F345EEC00524F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A878D41F345EEC00524F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D916C51F3BA49F009422B5 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		01D916C61F3BA49F009422B5 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		21A83BE08C60F81A1C389099 /* Pods-Thread Tweets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thread Tweets.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thread Tweets/Pods-Thread Tweets.release.xcconfig"; sourceTree = "<group>"; };
 		379A492F9915C9F1733BF988 /* Pods_Thread_Tweets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thread_Tweets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B9A1AC24FE4954A4E08957 /* Pods-Thread Tweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thread Tweets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thread Tweets/Pods-Thread Tweets.debug.xcconfig"; sourceTree = "<group>"; };
@@ -53,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0159E0451F3B1755005858B1 /* SafariServices.framework in Frameworks */,
 				E21EC94EC7AD805A972CD3D5 /* Pods_Thread_Tweets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +91,8 @@
 			children = (
 				01518B0A1F36F43400DAEA77 /* TweetCell.xib */,
 				01518B091F36F43400DAEA77 /* TweetCell.swift */,
+				01D916C61F3BA49F009422B5 /* ProfileCell.xib */,
+				01D916C51F3BA49F009422B5 /* ProfileCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -90,6 +102,7 @@
 			children = (
 				01518B0E1F36FB8200DAEA77 /* Ext+UITableView.swift */,
 				018A57B51F39029100253B1F /* Ext+UIView.swift */,
+				0140AF391F3B92F900920F40 /* Strings.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,9 +121,9 @@
 			children = (
 				018A054B1F34F6F2009E3F70 /* TabbarController.swift */,
 				018A054D1F34F83A009E3F70 /* HomeVC.swift */,
+				018A57B31F38FAD500253B1F /* ThreadVC.swift */,
 				018A05511F34FA3D009E3F70 /* FavVC.swift */,
 				018A054F1F34FA30009E3F70 /* ProfileVC.swift */,
-				018A57B31F38FAD500253B1F /* ThreadVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 			children = (
 				01A878D41F345EEC00524F34 /* Info.plist */,
 				01A878C81F345EEC00524F34 /* AppDelegate.swift */,
+				0159E0411F3B1390005858B1 /* Thread Tweets-Bridging-Header.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -168,6 +182,7 @@
 		4CCDCB6BB5A40787E71566EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0159E0441F3B1755005858B1 /* SafariServices.framework */,
 				379A492F9915C9F1733BF988 /* Pods_Thread_Tweets.framework */,
 			);
 			name = Frameworks;
@@ -217,6 +232,7 @@
 				TargetAttributes = {
 					01A878C41F345EEC00524F34 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -244,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A878D31F345EEC00524F34 /* LaunchScreen.storyboard in Resources */,
+				01D916C81F3BA49F009422B5 /* ProfileCell.xib in Resources */,
 				01A878D01F345EEC00524F34 /* Assets.xcassets in Resources */,
 				01518B0C1F36F43400DAEA77 /* TweetCell.xib in Resources */,
 			);
@@ -311,11 +328,13 @@
 				018A054E1F34F83A009E3F70 /* HomeVC.swift in Sources */,
 				01518B141F36FD0E00DAEA77 /* Reusable.swift in Sources */,
 				01518B121F36FCAC00DAEA77 /* NibLoadable.swift in Sources */,
+				0140AF3A1F3B92F900920F40 /* Strings.swift in Sources */,
 				01A878C91F345EEC00524F34 /* AppDelegate.swift in Sources */,
 				01518B0F1F36FB8200DAEA77 /* Ext+UITableView.swift in Sources */,
 				018A054C1F34F6F2009E3F70 /* TabbarController.swift in Sources */,
 				018A57B41F38FAD500253B1F /* ThreadVC.swift in Sources */,
 				01518B041F36E7B100DAEA77 /* ModelTweet.swift in Sources */,
+				01D916C71F3BA49F009422B5 /* ProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,12 +464,15 @@
 			baseConfigurationReference = A9B9A1AC24FE4954A4E08957 /* Pods-Thread Tweets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B534EWRJTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Thread Tweets/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mDevSA.Thread-Tweets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thread Tweets/Application/Thread Tweets-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -461,12 +483,14 @@
 			baseConfigurationReference = 21A83BE08C60F81A1C389099 /* Pods-Thread Tweets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B534EWRJTS;
 				INFOPLIST_FILE = "$(SRCROOT)/Thread Tweets/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mDevSA.Thread-Tweets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thread Tweets/Application/Thread Tweets-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

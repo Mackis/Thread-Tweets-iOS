@@ -19,7 +19,7 @@ class TabbarViewController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func splashScreen(){
-        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor.white)
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "logo-white"),iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(hexString: "5082C6")!)
 
         self.view.addSubview(revealingSplashView)
         self.setupTabs()

@@ -117,11 +117,9 @@ class HomeVC: UIViewController {
         tableView.emptyDataSetDelegate = self
         tableView.emptyDataSetDataSource = self
         tableView.register(TweetCell.self)
-        tableView.delaysContentTouches = false 
-        
+        tableView.delaysContentTouches = false
         tableView.separatorStyle = .none
         view.addSubview(tableView)
-        
         tableView.snp.makeConstraints { make in
             make.top.equalTo(headerView.snp.bottom)
             make.width.bottom.equalToSuperview()

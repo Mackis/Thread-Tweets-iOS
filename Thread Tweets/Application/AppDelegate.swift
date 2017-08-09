@@ -12,14 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var nav: TabbarViewController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let nav = TabbarViewController()
+        nav = TabbarViewController()
         self.window!.rootViewController = nav
         self.window?.makeKeyAndVisible()
+        Twitter.sharedInstance().start(withConsumerKey:"XunVpLs511YWjST0UGYI5FqkR", consumerSecret:"S6VpdCskiDspsBIYnBva8JO1EcxnPtII6KN3z5LNhixVY78czd")
+
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        nav.selectedIndex = 0
+        return Twitter.sharedInstance().application(app, open: url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -43,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
 
 
 }
